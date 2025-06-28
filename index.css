@@ -1,0 +1,174 @@
+/* Responsive Design Media Queries */
+
+/* Small Mobile (0px - 575px) */
+@media (max-width: 575px) {
+
+  .header-top h2.site-title {
+    font-size: 24px;
+  }
+
+  #nav-menu-container ul.nav-menu {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .navbar-logo {
+    max-width: 100px;
+  }
+
+  .banner-area .col-lg-5 h1 {
+    font-size: 20px;
+  }
+
+  .banner-area .col-lg-5 p {
+    font-size: 14px;
+  }
+
+  .user-profile {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .welcome-img img {
+    width: 100%;
+  }
+
+  .welcome-text h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .welcome-text p,
+  .welcome-text a {
+    text-align: center;
+  }
+
+  .hotline-area h2 {
+    font-size: 22px;
+  }
+
+  .hotline-area span {
+    font-size: 18px;
+  }
+
+  .footer-widget,
+  .footer-copyright {
+    text-align: center;
+  }
+
+  .social-icons ul {
+    justify-content: center;
+  }
+
+  .patient-area .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .patient-area .column img {
+    width: 100%;
+  }
+
+  .footer-area ul li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+
+}
+
+/* Tablets (576px - 991px) */
+@media (min-width: 576px) and (max-width: 991px) {
+
+  .navbar-logo {
+    max-width: 120px;
+  }
+
+  #nav-menu-container ul.nav-menu {
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .banner-area .col-lg-5 h1 {
+    font-size: 28px;
+  }
+
+  .user-profile {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .welcome-text h3 {
+    font-size: 24px;
+  }
+
+  .patient-area .container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-area ul li {
+    margin-bottom: 10px;
+  }
+
+}
+
+/* Laptops and Desktops (992px and above) */
+@media (min-width: 992px) {
+
+  #nav-menu-container ul.nav-menu {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+  }
+
+  .user-profile {
+    flex-wrap: nowrap;
+    gap: 30px;
+  }
+
+  .patient-area .container {
+    display: flex;
+    gap: 50px;
+  }
+
+  .patient-area .column {
+    flex: 1;
+  }
+
+}
+/* Make all product images responsive */
+
+.user-profile img,
+.welcome-img img,
+.patient-area .column img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+/* Optional: If images are still stretching strangely */
+.card img {
+    width: 100%;
+    height: 250px; /* Or adjust height as needed */
+    object-fit: cover;
+}
+
+/* For mobile: Reduce image height */
+@media (max-width: 575px) {
+    .card img {
+        height: 180px;
+    }
+}
+
+/* For patient area 2-column images */
+.patient-area .column img {
+    height: auto;
+    object-fit: contain;
+}
